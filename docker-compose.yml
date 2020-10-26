@@ -7,8 +7,7 @@ services:
     volumes:
       - ./data/db:/data/db
     environment:
-      MONGO_INITDB_DATABASE: intellipro-jwt
-      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: admin
 
   mongo-express:
@@ -17,6 +16,5 @@ services:
     ports:
       - 8081:8081
     environment:
-      MONGO_INITDB_DATABASE: intellipro-jwt
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
       ME_CONFIG_MONGODB_ADMINPASSWORD: admin
